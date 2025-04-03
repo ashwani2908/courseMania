@@ -1,14 +1,6 @@
 import Router from 'express'
 const courseRouter = Router();
-import courseModel from '../db.js'
-
-const timeLog = (req, res, next) => {
-    console.log('Time: ', Date.now())
-    next()
-}
-
-courseRouter.use(timeLog);
-
+import {courseModel} from '../db.js'
 
 
 courseRouter.post('/purchase',(req,res)=>{
